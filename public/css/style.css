@@ -2,8 +2,8 @@
   --primary: #ccdad1;
   --secondary: #9caea9;
   --tertiary: #788585;
-  --light-dark: #6f6866;
-  --dark: #38302e;
+  --light-dark: #19a5aa;
+  --dark: #217a90;
   --border-radius: 0.3rem;
 }
 
@@ -42,7 +42,8 @@ h2 a {
 }
 
 header {
-  margin-top: 50px;
+  margin-top: 20px;
+  
 }
 
 main {
@@ -109,6 +110,8 @@ input {
 
 .nav-item {
   margin: 0 40px;
+  font-size: 1.5rem;
+  /* color: var(--primary); */
 }
 
 .nav-item a {
@@ -140,10 +143,12 @@ input {
 }
 
 .list-group {
+  margin-top: 20px;
   padding: 1%;
 }
 
 .list-item {
+  
   margin-bottom: 10px;
   padding: 1.5%;
   border-radius: var(--border-radius);
