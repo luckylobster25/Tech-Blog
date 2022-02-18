@@ -6,6 +6,6 @@ const api = require('./api');
 
 router.use('/api', api);
 router.use('/', homeRoutes);
-router.use('/dash', dashboardRoutes);
+router.use('/dashboard', dashboardRoutes);
 
 module.exports = router;
