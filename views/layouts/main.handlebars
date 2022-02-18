@@ -1,26 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTT Tech-Blog</title>
-    <link rel="stylesheet" href="public/css/style.css">
+  <meta charset="UTF-8">
+  <title>Blog Spot</title>
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
-    <header>
-    </header>
+  <header>
     <nav class="navbar">
-        <a class="app-title" href="#">MTT Tech-Blog</a>
-        <a class="nav-item" href="#">HOME</a>
-        <a class="nav-item" href="views\layouts\dashboard.handlebars">DASH BOARD</a>
-        <a class="nav-item" href="#">LOGIN</a>
+      <h2><a class="nav-item" href="/">Home</a></h2>
+      <h2><a class="nav-item" href="/dashboard">Dashboard</a></h2>
+      {{#if loggedIn}}
+      <h2><a class="nav-item logout-link" href="#">Log Out</a></h2>
+      {{else}}
+      <h2><a class="nav-item" href="/login">Sign In</a></h2>
+      {{/if}}
+      <h1 class="app-title">Blog Spot</h1>
     </nav>
-    <body>
-        
-    </body>
-    <footer class="footer">
-        <a href="#">home</a>
-    </footer>
+  </header>
+  <main>
+    {{{ body }}}
+  </main>
+
+  <script src="/js/logout.js"></script>
+
 </body>
+
 </html>
