@@ -2,8 +2,8 @@
   --primary: #ccdad1;
   --secondary: #9caea9;
   --tertiary: #788585;
-  --light-dark: #19a5aa;
-  --dark: #217a90;
+  --light-dark: #6f6866;
+  --dark: #38302e;
   --border-radius: 0.3rem;
 }
 
@@ -41,10 +41,9 @@ h2 a {
   color: var(--primary);
 }
 
-header {
-  margin-top: 20px;
-  
-}
+/* header {
+  margin-top: 50px;
+} */
 
 main {
   margin: 20px auto;
@@ -75,7 +74,7 @@ input {
   font-size: 1.3rem;
   text-decoration: none;
   padding: 6px 5px;
-  width: 100%;
+  width: 200px;
   display: block;
   margin: 5px 0;
   border-radius: var(--border-radius);
@@ -104,14 +103,12 @@ input {
 
 .navbar {
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   background-color: var(--dark);
 }
 
 .nav-item {
   margin: 0 40px;
-  font-size: 1.5rem;
-  /* color: var(--primary); */
 }
 
 .nav-item a {
@@ -129,6 +126,7 @@ input {
 }
 
 .app-title {
+  margin: 25px 0px 30px 15px;
   font-size: 3rem;
   background-color: var(--primary);
   color: var(--dark);
@@ -143,12 +141,10 @@ input {
 }
 
 .list-group {
-  margin-top: 20px;
   padding: 1%;
 }
 
 .list-item {
-  
   margin-bottom: 10px;
   padding: 1.5%;
   border-radius: var(--border-radius);
