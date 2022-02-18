@@ -1,0 +1,20 @@
+<button class="btn"><a href="/dashboard/new">Create New Post</a></button>
+<hr>
+{{#if posts}}
+<h3>My Posts</h3>
+{{#each posts as |post|}}
+<div class="card">
+    <div class="card-header">
+        <h2><a href="dashboard/post/{{post.id}}">{{post.title}}</a></h2>
+    </div>
+    <div class="card-body">
+        <p id="timePosted">{{post.createdAt}}</p>
+        {{#if post.comments}}
+        <p>{{post.comments.length}} Comment(s)</p>
+        {{/if}}
+    </div>
+</div>
+{{/each}}
+{{else}}
+<h3>Make a post to get started!</h3>
+{{/if}}
