@@ -1,21 +1,30 @@
 const path = require('path');
 const express = require('express');
-// Import express-session
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+const { strict } = require('assert');
 const routes = require('./controllers');
-const sequelize = require('./config/connection');
-const helpers = require('./utils/helpers');
+const sequelize = require('./config/connection.js');
+const helpers = require('./utils/helpers.js');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Set up sessions
 const sess = {
   secret: 'Super secret secret',
+  cookie: {
+    maxAge: 180000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
   resave: false,
-  saveUninitialized: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
@@ -32,5 +41,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () =>
+    console.log(
+      `\nServer running on port ${PORT}. Visit http://localhost:${PORT} and create an account!`
+    )
+  );
 });
