@@ -1,7 +1,10 @@
 # Tech_Blog_project💎
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)  
 [LINK TO GITHUB](https://github.com/luckylobster25/Tech-Blog)  
-[LINK TO HEROKU-LIVE]()  
+[LINK TO HEROKU-LIVE](https://thawing-peak-67886.herokuapp.com/)  
+Here is an log-in for the Heroku. Email: test@test.com Password: 123456789 or Create your own log in.  
+
+********************************  
 ![DISPLAY OF APPLICATION](public/img/home-display.png)
 ## 📝 Table of Content
 *[Introduction](#introduction)  
