@@ -39,7 +39,7 @@ h2 a:visited {
 }
 
 h2 a {
-  color: var(--primary);
+  color: rgb(27, 148, 179);
 }
 
 /* header {
@@ -58,6 +58,7 @@ a {
 
 p {
   font-size: 20px;
+  color: #052529;
 }
 
 input {
@@ -69,7 +70,7 @@ input {
 }
 
 .card-header h2 {
-  color: var(--primary);
+  color: rgb(32, 144, 178);
 }
 
 .btn {
