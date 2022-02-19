@@ -5,7 +5,7 @@ const commentFormHandler = async function(event) {
   const body = document.querySelector('#comment-body').value;
 
   if (body) {
-    await fetch('/api/comments', {
+    const response = await fetch('/api/comments', {
       method: 'POST',
       body: JSON.stringify({
         postId,
@@ -15,8 +15,11 @@ const commentFormHandler = async function(event) {
         'Content-Type': 'application/json'
       }
     });
-
-    document.location.reload();
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert('Failed to add dish');
+    }
   }
 };
 
