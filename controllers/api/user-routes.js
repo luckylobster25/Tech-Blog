@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.email = loginData.email;
+      req.session.email = req.body.email;
       req.session.userId = loginData.id
 
       res.status(200).json(loginData);
