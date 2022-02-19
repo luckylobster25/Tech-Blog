@@ -8,7 +8,6 @@
     </div>
     <div class="card-body">
         <p>{{post.body}}</p>
-        {{!-- Could add code here to render an edit link only if req.session.user == post.user, but Handlebars doesn't do logical operators so it would take some doing. --}}
     </div>
 </div>
 
@@ -39,7 +38,6 @@
             <button class="btn btn-primary" type="submit">Submit Comment</button>
         </div>
         <div class="form-group">
-            {{!-- <label for="id">Post ID</label> --}}
             <input type="hidden" id="post-id" class="form-input" name="post-id" value="{{post.id}}" disabled>
         </div>
     </form>

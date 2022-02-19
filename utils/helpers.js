@@ -1,5 +1,5 @@
 module.exports = {
-  // Formats date to display correctly when passed into handlebars
+  // Formats date to display correctly passed into handlebars
   setDate: date => {
     dateString = JSON.stringify(date);
     noQuotes = dateString.split('"');

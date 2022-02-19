@@ -85,7 +85,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
         const post = postData.get({ plain: true });
         const comments = post.comments;
         post.createdAt = setDate(post.createdAt);
-        
+
         res.render('single-post', { post, comments, loggedIn: req.session.loggedIn, userSession: req.session.username });
     } catch (err) {
         res.status(500).json(err);

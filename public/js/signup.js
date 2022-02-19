@@ -5,9 +5,9 @@ const signupFormHandler = async function (event) {
   const email = document.querySelector('#email-signup').value;
   const password = document.querySelector('#password-signup').value;
 
-  console.log(email,password);
+  console.log(email, password);
   if (!username || !email || !password) {
-    alert ('Please fill out all fields.')
+    alert('Please fill out all fields.')
   } else {
     const response = await fetch('/api/user', {
       method: 'POST',

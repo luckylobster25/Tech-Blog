@@ -1,6 +1,6 @@
-const newFormHandler = async function(event) {
+const newFormHandler = async function (event) {
   event.preventDefault();
-  
+
   const title = document.querySelector('#title').value;
   const body = document.querySelector('#content').value;
 
