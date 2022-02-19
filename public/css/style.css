@@ -1,9 +1,9 @@
 :root {
   --primary: #d2e2e9;
   --secondary: #dbf3ec;
-  --tertiary: #043d3d;
-  --light-dark: #0d96a0;
-  --dark: #015a75;
+  --tertiary: #0fd7f1;
+  --light-dark: #5ec5cc;
+  --dark: #0392ca;
   --border-radius: 0.3rem;
 }
 
@@ -13,6 +13,7 @@
 
 body {
   background-color: var(--primary);
+  background-image: linear-gradient(180deg, rgb(99, 225, 241),rgb(13, 216, 243), rgb(4, 214, 221), rgb(10, 226, 197) ) ;
   margin: 0;
   padding: 0;
   font-family: "IBM Plex Sans", sans-serif;
@@ -51,6 +52,7 @@ main {
 }
 
 a {
+  color: rgb(14, 194, 179);
   text-decoration: none;
 }
 
@@ -105,6 +107,9 @@ input {
   width: 100%;
   /* position: fixed; */
   background-color: var(--dark);
+  background-image: url(https://idunn.pro/wp-content/uploads/2016/03/blueprint-technology-wallpaper.jpg);
+  background-size: 100%;
+  background-position-y: -160px;
 }
 
 .nav-item {
@@ -176,7 +181,7 @@ input {
 
 .card-header {
   color: var(--primary);
-  background-color: var(--dark);
+  background-color: #63e7db;
   padding: 1%;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
